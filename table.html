@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Class Timetable</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            color: #2c3e50;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 95%;
+            margin: 20px auto;
+            text-align: center;
+            background-color: white;
+        }
+
+        th, td {
+            border: 2px solid #333;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #34495e;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #ecf0f1;
+        }
+
+        .lunch {
+            background-color: #34495e;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> CLASS TIMETABLE</h1>
+    <hr>
+
+    <table>
+        <thead>
+            <tr>
+                <th>SL NO</th>
+                <th>TIME</th>
+                <th>MONDAY</th>
+                <th>TUESDAY</th>
+                <th>WEDNESDAY</th>
+                <th>THURSDAY</th>
+                <th>FRIDAY</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>9:00 - 10:00</td>
+                <td>Front-End</td>
+                <td>Applied Statistics</td>
+                <td>DBMS</td>
+                <td>Data Structure</td>
+                <td>Problem Solving</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>10:00 - 11:00</td>
+                <td>Problem Solving</td>
+                <td>Data Structure</td>
+                <td>DBMS</td>
+                <td>Applied Statistics</td>
+                <td>Front-End</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>11:00 - 12:00</td>
+                <td>DBMS</td>
+                <td>Front-End</td>
+                <td>Applied Statistics</td>
+                <td>Problem Solving</td>
+                <td>Data Structure</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>12:00 - 1:00</td>
+                <td>Data Structure</td>
+                <td>Problem Solving</td>
+                <td>Front-End</td>
+                <td>DBMS</td>
+                <td>Applied Statistics</td>
+            </tr>
+
+            <tr class="lunch">
+                <td colspan="7">🍽️ LUNCH BREAK (1:00 - 2:00)</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>2:00 - 3:00</td>
+                <td>Applied Statistics</td>
+                <td>DBMS</td>
+                <td>Data Structure</td>
+                <td>Front-End</td>
+                <td>Problem Solving</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+</html>
