@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+nav {
+    background: #333;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #667eea;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+.about {
+    background: #f4f6f9;
+}
+
+.courses {
+    background: white;
+}
+
+.course-box {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 25px;
+    background: #667eea;
+    color: white;
+    border-radius: 8px;
+}
+
+.faculty {
+    background: #f4f6f9;
+}
+
+.gallery img {
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.contact {
+    background: white;
+}
+
+footer {
+    background: #141e30;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
