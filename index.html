@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Intro of JS</title>
+    </head>
+    <body>
+        <h1>Introduction to JavaScript</h1>
+
+
+        <script>
+            // var a=10;
+            // var b=20;
+            // var sum=a+b;
+            // document.write("The sum of a and b is: "+sum);
+            // console.log(sum) 
+
+
+
+            // var name ="sanjana"
+            // var name="singh"//reintializing a variable
+            // const pi=3.14//could reintialize or intizialize a constant variable
+            // let age=20//let is used to declare a variable which can be reintialized but not redeclared
+            // document.write(name)
+
+
+
+
+
+            //Normal function
+            function Sum(){
+                var a =10;
+                var b=20;
+                document.write("The sum of a and b is: "+(a+b));
+            };
+            Sum()//function call
+
+            //parmerterized function
+            function Sum(a,b){
+                document.write("The sum of a and b is: "+(a+b));
+            };
+            Sum(100,200)
+
+            //parameter with values
+            function Sum(a=10,b=20){
+                document.write("The sum of a and b is: "+(a+b));
+            };
+            Sum()//function call with default values
+
+            //arrow function
+            var Sum=()=>{
+                var a =10;
+                var b=20;
+                document.write("The sum of a and b is: "+(a+b));
+            };
+
+        </script>
+    </body>
+
+</html>
+
+<!-- <Br>Used to go next line</Br>
+writeln() is used to write after giving some space It is similar to writeln() in other programming languages.
+(a+"<br>") is used to write the value of a variable and then move to the next line. in javascript -->
+
