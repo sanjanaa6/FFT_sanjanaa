@@ -1,0 +1,271 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>iOS Calculator UI</title>
+
+<style>
+body{
+    background:#f5f5f5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.calculator{
+    background:#1c1c1c;
+    padding:20px;
+    border-radius:20px;
+    width:260px;
+}
+
+.display{
+    color:white;
+    font-size:48px;
+    text-align:right;
+    margin-bottom:20px;
+}
+
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+}
+
+button{
+    border:none;
+    border-radius:50%;
+    height:55px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.gray{
+    background:#a5a5a5;
+}
+
+.dark{
+    background:#333333;
+    color:white;
+}
+
+.orange{
+    background:#ff9500;
+    color:white;
+}
+
+.zero{
+    grid-column:span 2;
+    border-radius:40px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="calculator">
+
+<div class="display">0</div>
+
+<div class="buttons">
+
+<button class="gray">C</button>
+<button class="gray">+/-</button>
+<button class="gray">%</button>
+<button class="orange">÷</button>
+
+<button class="dark">7</button>
+<button class="dark">8</button>
+<button class="dark">9</button>
+<button class="orange">×</button>
+
+<button class="dark">4</button>
+<button class="dark">5</button>
+<button class="dark">6</button>
+<button class="orange">−</button>
+
+<button class="dark">1</button>
+<button class="dark">2</button>
+<button class="dark">3</button>
+<button class="orange">+</button>
+
+<button class="dark zero">0</button>
+<button class="dark">.</button>
+<button class="orange">=</button>
+
+</div>
+
+</div>
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>iOS Style Calculator</title>
+
+<style>
+
+body{
+    background:#f5f5f5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial;
+}
+
+.calculator{
+    background:#1c1c1c;
+    padding:20px;
+    border-radius:20px;
+    width:260px;
+}
+
+.display{
+    color:white;
+    font-size:40px;
+    text-align:right;
+    margin-bottom:15px;
+    min-height:50px;
+}
+
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+}
+
+button{
+    border:none;
+    border-radius:50%;
+    height:55px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.gray{
+    background:#a5a5a5;
+}
+
+.dark{
+    background:#333;
+    color:white;
+}
+
+.orange{
+    background:#ff9500;
+    color:white;
+}
+
+.zero{
+    grid-column:span 2;
+    border-radius:40px;
+}
+
+button:active{
+    transform:scale(0.95);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="calculator">
+
+<div class="display" id="display">0</div>
+
+<div class="buttons">
+
+<button class="gray" onclick="clearDisplay()">C</button>
+<button class="gray" onclick="toggleSign()">+/-</button>
+<button class="gray" onclick="percentage()">%</button>
+<button class="orange" onclick="appendOperator('/')">÷</button>
+
+<button class="dark" onclick="appendNumber('7')">7</button>
+<button class="dark" onclick="appendNumber('8')">8</button>
+<button class="dark" onclick="appendNumber('9')">9</button>
+<button class="orange" onclick="appendOperator('*')">×</button>
+
+<button class="dark" onclick="appendNumber('4')">4</button>
+<button class="dark" onclick="appendNumber('5')">5</button>
+<button class="dark" onclick="appendNumber('6')">6</button>
+<button class="orange" onclick="appendOperator('-')">−</button>
+
+<button class="dark" onclick="appendNumber('1')">1</button>
+<button class="dark" onclick="appendNumber('2')">2</button>
+<button class="dark" onclick="appendNumber('3')">3</button>
+<button class="orange" onclick="appendOperator('+')">+</button>
+
+<button class="dark zero" onclick="appendNumber('0')">0</button>
+<button class="dark" onclick="appendNumber('.')">.</button>
+<button class="orange" onclick="calculate()">=</button>
+
+</div>
+
+</div>
+
+<script>
+
+let display = document.getElementById("display");
+let current = "";
+
+function appendNumber(num){
+    current += num;
+    display.innerText = current;
+}
+
+function appendOperator(op){
+    current += " " + op + " ";
+    display.innerText = current;
+}
+
+function clearDisplay(){
+    current = "";
+    display.innerText = "0";
+}
+
+function calculate(){
+    try{
+        current = eval(current).toString();
+        display.innerText = current;
+    }
+    catch{
+        display.innerText = "Error";
+        current="";
+    }
+}
+
+function percentage(){
+    current = (eval(current)/100).toString();
+    display.innerText = current;
+}
+
+function toggleSign(){
+    current = (-eval(current)).toString();
+    display.innerText = current;
+}
+
+</script>
+
+</body>
+</html>
